@@ -1,0 +1,11 @@
+<% content_for :page_content do %>
+    <div class="row">
+        <div class="span3">
+            <%= partial 'sidebar' %>
+        </div>
+        <div class="span9">
+            <%= content_for?(:organizations_content) ? yield(:organizations_content) : yield %>
+        </div>
+    </div>
+<% end %>
+<%= render :template => '/_layout' %>
